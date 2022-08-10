@@ -253,6 +253,7 @@ const styleBackFunc=()=>{
 	renderMenu();
 	menuPaddles.render();
 	menuPaddles.skinEx();
+	returnSettings();
 }
 
 const styleForwardFunc=()=>{
@@ -265,6 +266,14 @@ const styleForwardFunc=()=>{
 	menuPaddles.render();
 	menuPaddles.skinEx();	
 	renderMenu();
+	returnSettings();
+}
+
+const returnSettings =()=>{
+	difficultyLevel = 'easy';
+	paddleHeight = 'average';
+	scoreValue = 5;
+	numberOfBalls = 1;
 }
 
 const startGameFunc=()=>{
@@ -353,29 +362,20 @@ Button.prototype.area = function (){
     return (this.width * this.height);
 };
 Button.prototype.sqToTri = function(mousePos) {
-    let farX = this.xPos + this.width;
-    let farY = this.yPos + this.height;
-    
-    let upTri = Math.abs(((this.xPos * (mousePos.y - this.yPos)) + (mousePos.x * (this.yPos - this.yPos)) + (farX * (this.yPos - mousePos.y)))/2);
-    
-    let lowTri = Math.abs(((this.xPos * (mousePos.y - farY)) + (mousePos.x * (farY - farY)) + (farX * (farY - mousePos.y)))/2);
-    
-    let leftTri =  Math.abs(((this.xPos * (mousePos.y - farY)) + (mousePos.x * (farY - this.yPos)) + (this.xPos * (this.yPos - mousePos.y)))/2);
-    
-    
-    let rightTri =  Math.abs(((farX * (mousePos.y - farY)) + (mousePos.x * (farY - this.yPos)) + (farX * (this.yPos - mousePos.y)))/2);
-    
-    
-    let buttonArea = this.width * this.height;
-    
-    if(buttonArea >= (rightTri + leftTri + upTri + lowTri)){
-        if(this.xPos <= mousePos.x && this.yPos <= mousePos.y){
-           
-          buttonFunctions[this.use]();
-        }
-    }
+    console.log('x mouse is:' + mousePos.x + 'y mouse is' + mousePos.y)
+	console.log( 'start '+ this.xPos  + ' and x end is' + (this.xPos +this.width))
 
-}; 
+
+
+if (mousePos.x >= this.xPos && mousePos.x <=  (this.xPos + this.width )){
+	if (mousePos.y >= this.yPos && mousePos.y <= (this.yPos + this.height)) {
+		buttonFunctions[this.use]();
+	}
+} 
+
+};
+
+
 //difficulty level settings
 let easyBut = new Button(canvas.width/3.2, canvas.height/3.6, canvas.width/12, canvas.height/19, 'red', 0);
 let medBut = new Button(canvas.width/1.95, canvas.height/3.6, canvas.width/10, canvas.height/19, 'blue', 1);
@@ -637,7 +637,8 @@ canvas.removeEventListener('mousedown', changeScreen);
 	returnMenu(){
 	if(cpuScore.length == scoreValue || humanScore.length == scoreValue){	
 		ballObjects = []; 
-		canvas.addEventListener('mousedown', changeScreen);			
+		canvas.addEventListener('mousedown', changeScreen);
+		returnSettings();
 	}
 }
 };	
