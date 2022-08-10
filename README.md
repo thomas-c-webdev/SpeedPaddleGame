@@ -37,4 +37,4 @@ There was only one piece of music used in this game with an On and Off switch on
 Another feature that's somtimes easy to overlook is the paddle collision. When the ball hits the edge of the paddle, there's a temporary increase in speed of the ball. This encourages the player to take more risk and vary their strategy in playing against the computer.
 
 ## Installation
-Playing this game is relatively straightforward as the program can be downloaded and ran in most modern browsers.
+Playing this game is relatively straightforward as the files can be downloaded and ran in most modern browsers. Open the HTML file with all the files in the same folder and that should work.
