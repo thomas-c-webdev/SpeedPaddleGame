@@ -362,10 +362,6 @@ Button.prototype.area = function (){
     return (this.width * this.height);
 };
 Button.prototype.sqToTri = function(mousePos) {
-    console.log('x mouse is:' + mousePos.x + 'y mouse is' + mousePos.y)
-	console.log( 'start '+ this.xPos  + ' and x end is' + (this.xPos +this.width))
-
-
 
 if (mousePos.x >= this.xPos && mousePos.x <=  (this.xPos + this.width )){
 	if (mousePos.y >= this.yPos && mousePos.y <= (this.yPos + this.height)) {
