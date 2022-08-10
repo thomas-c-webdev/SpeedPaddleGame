@@ -16,4 +16,7 @@ With differing paddle sizes, there are cases where more points can accumulate qu
 One of my favorite features is the player's ability to determine how many balls they want. The base level is 1, but it goes all the way to 5. Additionally, the balls bounce off each other in a way that's similar to basic physics using vectors. Once each ball is created in the game, they each vary somewhat in size and speed. 
 ### Art Style and Music
 This was perhaps one of the most unique aspects to the game. The player can select between 3 different graphics of menu and play being: Classic, Mlitary, and Crystal. Here some pictures of the gameplay with each of these maps:
-![]
+
+![classic-map](https://user-images.githubusercontent.com/29243814/183991479-3af9d81f-09e8-4f83-a8f1-fd136566bb71.png)
+![military-map](https://user-images.githubusercontent.com/29243814/183991432-d04d2056-c70f-4108-9237-8112f856978d.png)
+![crystal-map](https://user-images.githubusercontent.com/29243814/183991555-e28faea2-4ca5-4754-8e68-bee6efe84a83.png)
