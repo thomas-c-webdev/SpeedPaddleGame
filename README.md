@@ -1,10 +1,10 @@
-# Pure Javascript Pong Inspired Game
+ # Pure Javascript Pong Inspired Game
 This is an arcade style Pong inspired game using pure javascript and the HTML5 canvas.
 ## Motivation
 The inception of this project started when I was first new to development and desired to understand Object-Oriented Programming. At the same time, I had always been in awe of how simple physics can be replicated in programming. These were driving forces in creating this 2D Pong inspired game.
-##Build Status
+## Build Status
 Complete
-##Features
+## Features
 Many Pong clones have been made before. That's why I ventured to make one with many features and unique art styles to do something different.
 ### Difficulty Level
 The player can go against the computer on three different difficulty levels. These are Easy, Medium, and Impossible. These levels affect the speed, reaction time, and general competency of the computer.
